@@ -1,0 +1,19 @@
+Begin
+    Name is a good boy "Doggy"
+    Name2 is a good boy "Style"
+    Name3 is a good boy "DoggyStyle"
+    Age is a good boy 100
+    Age1 is a good boy 0
+    Age2 is a good boy 0
+    Age3 is a good boy 0
+    Sit, be a good boy 101(
+    Paw Age1=Age%3 
+    Paw Age2=Age%5
+    Paw Age3=Age%15
+    Confused Age3==0(Confused Age2==0(Confused Age1==0(BARK Name3)))
+    Confused Age3!=0(Confused Age2!=0(Confused Age1==0(BARK Name)))
+    Confused Age3!=0(Confused Age2==0(Confused Age1!=0(BARK Name2)))
+    Confused Age3!=0(Confused Age2!=0(Confused Age1!=0(BARK Age)))
+    Paw Age=Age-1 
+    )
+end

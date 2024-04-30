@@ -1,0 +1,35 @@
+Program:
+    'Begin'
+        statements*=Statements
+    'end';
+Statements:
+   PrintStatement | AssignmentStatement | ForLoopStatement | 
+   if_statment  | WhileLoop| MathAssignment;
+PrintStatement: 
+    'BARK' var=ID;
+AssignmentStatement: 
+    var=ID 'is a good boy' expr=Expression;
+Expression:
+    BASETYPE;
+ForLoopStatement: 
+    'RollOver' val1=INT ',' val2=INT ('('statements*=Statements')')?;
+if_statment:
+    'Confused' comparison=compareValue compareOperator=CompareOperator var1=INT ('('statements*=Statements')')?;
+compareValue:
+val=ID;
+CompareOperator:
+'<' | '>' | '==' | '!=';
+WhileLoop: 
+    'Sit, be a good boy' val1=INT ('('statements*=Statements')')?;
+MathAssignment: 
+    'Paw' var=ID '=' expr=mathExpression;
+
+mathExpression: 
+    var1=operand varop=operator var3=operand
+;
+singleExpression:
+   operator | operand | ('('mathExpression')');
+operand:
+    BASETYPE;
+operator: 
+    '+' | '-' | '/' | '*' | '%' |  ('('mathExpression')');
