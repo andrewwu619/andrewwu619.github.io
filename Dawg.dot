@@ -1,0 +1,69 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+5025338752[ label="{Program|}"]
+
+5025340672[ label="{*Statements|}"]
+
+5025343360[ label="{PrintStatement|var: ID\l}"]
+
+5025346048[ label="{AssignmentStatement|var: ID\lexpr: Expression\l}"]
+
+5025351424[ label="{ForLoopStatement|val1: INT\lval2: INT\l}"]
+
+5025354112[ label="{if_statment|compareOperator: CompareOperator\lvar1: INT\l}"]
+
+5025356800[ label="{compareValue|val: ID\l}"]
+
+5025362176[ label="{WhileLoop|val1: INT\l}"]
+
+5025364864[ label="{MathAssignment|var: ID\l}"]
+
+5025367552[ label="{mathExpression|var1: operand\lvar3: operand\l}"]
+
+5025370240[ label="{*singleExpression|}"]
+
+5025375616[ label="{*operator|}"]
+
+
+
+5025338752 -> 5025340672[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+5025340672 -> 5025343360 [dir=back]
+5025340672 -> 5025346048 [dir=back]
+5025340672 -> 5025351424 [dir=back]
+5025340672 -> 5025354112 [dir=back]
+5025340672 -> 5025362176 [dir=back]
+5025340672 -> 5025364864 [dir=back]
+5025351424 -> 5025340672[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+5025354112 -> 5025356800[arrowtail=diamond, dir=both, headlabel="comparison "]
+5025354112 -> 5025340672[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+5025362176 -> 5025340672[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+5025364864 -> 5025367552[arrowtail=diamond, dir=both, headlabel="expr "]
+5025367552 -> 5025375616[arrowtail=diamond, dir=both, headlabel="varop "]
+5025370240 -> 5025375616 [dir=back]
+5025370240 -> 5025367552 [dir=back]
+5025375616 -> 5025367552 [dir=back]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>CompareOperator</b></td><td>&lt;|&gt;|==|!=</td>
+	</tr>
+	<tr>
+		<td><b>Expression</b></td><td>NUMBER|FLOAT|BOOL|ID|STRING</td>
+	</tr>
+	<tr>
+		<td><b>operand</b></td><td>NUMBER|FLOAT|BOOL|ID|STRING</td>
+	</tr>
+</table> >]
+
+
+}
