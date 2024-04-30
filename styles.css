@@ -1,0 +1,83 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin:  auto;
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 100px;
+}
+
+/* Header Styles */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #c0392b;
+}
+
+.lead {
+    font-size: 1.5em;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* Example Styles */
+.example {
+    margin-top: 40px;
+}
+
+.example pre {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.example .left {
+    margin-bottom: 10px;
+}
+
+.example h4 {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 40px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
